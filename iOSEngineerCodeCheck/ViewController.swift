@@ -9,15 +9,14 @@
 import UIKit
 
 class ViewController: UITableViewController, UISearchBarDelegate {
-
+    
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var repository: [[String: Any]]=[]
+    var repository: [[String: Any]] = []
     
     var task: URLSessionTask?
-    var word: String!
-    var url: String!
-    var index: Int!
+    var word: String = ""
+    var index: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,24 +37,33 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-        word = searchBar.text!
+        guard let word = searchBar.text,
+              !word.isEmpty else { return }
         
-        if word.count != 0 {
-            url = "https://api.github.com/search/repositories?q=\(word!)"
-            task = URLSession.shared.dataTask(with: URL(string: url)!) { (data, res, err) in
-                if let object = try! JSONSerialization.jsonObject(with: data!) as? [String: Any] {
-                    if let items = object["items"] as? [[String: Any]] {
-                    self.repository = items
-                        DispatchQueue.main.async {
-                            self.tableView.reloadData()
-                        }
-                    }
+        guard let url = URL(string:"https://api.github.com/search/repositories?q=\(word)")
+        else { return }
+        
+        task = URLSession.shared.dataTask(with: url) { (data, res, err) in
+            
+            guard let data = data else { return }
+            
+            do {
+                guard let object = try JSONSerialization.jsonObject(with: data) as? [String: Any] else { return }
+                guard let items = object["items"] as? [[String: Any]] else { return }
+                
+                self.repository = items
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
                 }
+                
+            } catch {
+                print("エラーが発生しました: \(error)")
             }
-        // これ呼ばなきゃリストが更新されません
-        task?.resume()
         }
         
+        // これ呼ばなきゃリストが更新されません
+        task?.resume()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
