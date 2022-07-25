@@ -51,6 +51,7 @@ class ViewController2: UIViewController {
             guard let data = data else { return }
             
             let image = UIImage(data: data)
+            
             DispatchQueue.main.async {
                 self.imageView.image = image
             }
