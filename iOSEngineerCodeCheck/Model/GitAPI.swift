@@ -49,7 +49,8 @@ class GitAPI {
                         stargazersCount: item.stargazersCount,
                         watchersCount: item.watchersCount,
                         language: item.language,
-                        forksCount: item.forksCount
+                        forksCount: item.forksCount,
+                        openIssuesCount: item.openIssuesCount
                     )
                     
                     repositorys.append(addRepository)

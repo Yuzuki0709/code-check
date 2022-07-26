@@ -15,6 +15,7 @@ struct GitRepository: Codable {
     let stargazersCount, watchersCount: Int?
     let language: String?
     let forksCount: Int?
+    let openIssuesCount: Int?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -24,6 +25,7 @@ struct GitRepository: Codable {
         case watchersCount = "watchers_count"
         case language
         case forksCount = "forks_count"
+        case openIssuesCount = "open_issues_count"
     }
 }
 

@@ -13,8 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var repositoryTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var repository: [[String: Any]] = []
-    
     var repositorys: [GitRepository] = [] {
         didSet {
             self.repositoryTableView.reloadData()
