@@ -21,12 +21,12 @@ class ViewController2: UIViewController {
     @IBOutlet weak var forksLabel: UILabel!
     @IBOutlet weak var issuesLabel: UILabel!
     
-    weak var vc1: ViewController!
+    weak var viewController1: ViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let repository = vc1.repository[vc1.index]
+        let repository = viewController1.repository[viewController1.index]
         
         languageLabel.text = "Written in \(repository["language"] as? String ?? "")"
         stargazersLabel.text = "\(repository["stargazers_count"] as? Int ?? 0) stars"
@@ -39,7 +39,7 @@ class ViewController2: UIViewController {
     
     func getImage(){
         
-        let repository = vc1.repository[vc1.index]
+        let repository = viewController1.repository[viewController1.index]
         
         titleLabel.text = repository["full_name"] as? String
         

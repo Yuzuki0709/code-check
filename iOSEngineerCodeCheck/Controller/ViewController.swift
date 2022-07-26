@@ -8,26 +8,43 @@
 
 import UIKit
 
-class ViewController: UITableViewController, UISearchBarDelegate {
+class ViewController: UIViewController {
     
+    @IBOutlet weak var repositoryTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    
+    var repository: [[String: Any]] = []
     
     var repositorys: [GitRepository] = [] {
         didSet {
-            self.tableView.reloadData()
+            self.repositoryTableView.reloadData()
         }
     }
-    
-    var task: URLSessionTask?
     var word: String = ""
+    var url: String = ""
     var index: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        searchBar.text = "GitHubのリポジトリを検索できるよー"
+        searchBar.placeholder = "GitHubのリポジトリを検索できるよー"
         searchBar.delegate = self
+        
+        repositoryTableView.delegate = self
+        repositoryTableView.dataSource = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "Detail"{
+            guard let dtl = segue.destination as? ViewController2 else { return }
+            dtl.viewController1 = self
+        }
+        
+    }
+}
+
+extension ViewController: UISearchBarDelegate {
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         // ↓こうすれば初期のテキストを消せる
@@ -35,12 +52,7 @@ class ViewController: UITableViewController, UISearchBarDelegate {
         return true
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        task?.cancel()
-    }
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
         guard let word = searchBar.text,
               !word.isEmpty else { return }
         
@@ -48,36 +60,31 @@ class ViewController: UITableViewController, UISearchBarDelegate {
             self.repositorys = repositorys
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "Detail"{
-            let dtl = segue.destination as! ViewController2
-            dtl.vc1 = self
-        }
-        
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repositorys.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell()
-        let repository = repository[indexPath.row]
-        cell.textLabel?.text = repository["full_name"] as? String ?? ""
-        cell.detailTextLabel?.text = repository["language"] as? String ?? ""
-        cell.tag = indexPath.row
+        guard let cell = repositoryTableView.dequeueReusableCell(
+            withIdentifier: RepositoryTableViewCell.identifier,
+            for: indexPath
+        ) as? RepositoryTableViewCell else { return UITableViewCell() }
+        
+        let repository = repositorys[indexPath.row]
+        cell.setup(repository: repository)
+        
         return cell
-        
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 画面遷移時に呼ばれる
         index = indexPath.row
         performSegue(withIdentifier: "Detail", sender: self)
         
     }
-    
 }
