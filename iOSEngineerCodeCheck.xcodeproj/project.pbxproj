@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2E8FA0C288F71FE000A5CF2 /* GitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E8FA0B288F71FE000A5CF2 /* GitRepository.swift */; };
 		BF0A658D244F2A3B00280FA6 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A658C244F2A3B00280FA6 /* ViewController2.swift */; };
 		BFD945DF244DC5E80012785A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD945DE244DC5E80012785A /* AppDelegate.swift */; };
 		BFD945E1244DC5E80012785A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD945E0244DC5E80012785A /* SceneDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A2E8FA0B288F71FE000A5CF2 /* GitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepository.swift; sourceTree = "<group>"; };
 		BF0A658C244F2A3B00280FA6 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		BFD945DB244DC5E80012785A /* iOSEngineerCodeCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSEngineerCodeCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD945DE244DC5E80012785A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2E8FA08288E9C24000A5CF2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFD945E4244DC5E80012785A /* Main.storyboard */,
+				BFD945E9244DC5EB0012785A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2E8FA09288E9C2C000A5CF2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFD945E2244DC5E80012785A /* ViewController.swift */,
+				BF0A658C244F2A3B00280FA6 /* ViewController2.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A2E8FA0A288E9C36000A5CF2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2E8FA0B288F71FE000A5CF2 /* GitRepository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BFD945D2244DC5E80012785A = {
 			isa = PBXGroup;
 			children = (
@@ -101,13 +129,12 @@
 		BFD945DD244DC5E80012785A /* iOSEngineerCodeCheck */ = {
 			isa = PBXGroup;
 			children = (
+				A2E8FA0A288E9C36000A5CF2 /* Model */,
+				A2E8FA09288E9C2C000A5CF2 /* Controller */,
+				A2E8FA08288E9C24000A5CF2 /* View */,
 				BFD945DE244DC5E80012785A /* AppDelegate.swift */,
 				BFD945E0244DC5E80012785A /* SceneDelegate.swift */,
-				BFD945E2244DC5E80012785A /* ViewController.swift */,
-				BF0A658C244F2A3B00280FA6 /* ViewController2.swift */,
-				BFD945E4244DC5E80012785A /* Main.storyboard */,
 				BFD945E7244DC5EB0012785A /* Assets.xcassets */,
-				BFD945E9244DC5EB0012785A /* LaunchScreen.storyboard */,
 				BFD945EC244DC5EB0012785A /* Info.plist */,
 			);
 			path = iOSEngineerCodeCheck;
@@ -147,6 +174,8 @@
 			dependencies = (
 			);
 			name = iOSEngineerCodeCheck;
+			packageProductDependencies = (
+			);
 			productName = iOSEngineerCodeCheck;
 			productReference = BFD945DB244DC5E80012785A /* iOSEngineerCodeCheck.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +248,8 @@
 				Base,
 			);
 			mainGroup = BFD945D2244DC5E80012785A;
+			packageReferences = (
+			);
 			productRefGroup = BFD945DC244DC5E80012785A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD945E3244DC5E80012785A /* ViewController.swift in Sources */,
+				A2E8FA0C288F71FE000A5CF2 /* GitRepository.swift in Sources */,
 				BF0A658D244F2A3B00280FA6 /* ViewController2.swift in Sources */,
 				BFD945DF244DC5E80012785A /* AppDelegate.swift in Sources */,
 				BFD945E1244DC5E80012785A /* SceneDelegate.swift in Sources */,
