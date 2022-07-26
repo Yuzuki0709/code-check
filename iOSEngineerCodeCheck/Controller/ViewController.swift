@@ -12,7 +12,11 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var repository: [[String: Any]] = []
+    var repositorys: [GitRepository] = [] {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     var task: URLSessionTask?
     var word: String = ""
@@ -40,30 +44,9 @@ class ViewController: UITableViewController, UISearchBarDelegate {
         guard let word = searchBar.text,
               !word.isEmpty else { return }
         
-        guard let url = URL(string:"https://api.github.com/search/repositories?q=\(word)")
-        else { return }
-        
-        task = URLSession.shared.dataTask(with: url) { (data, res, err) in
-            
-            guard let data = data else { return }
-            
-            do {
-                guard let object = try JSONSerialization.jsonObject(with: data) as? [String: Any] else { return }
-                guard let items = object["items"] as? [[String: Any]] else { return }
-                
-                self.repository = items
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-                
-            } catch {
-                print("エラーが発生しました: \(error)")
-            }
+        GitAPI.searchRepository(keyword: word) { repositorys in
+            self.repositorys = repositorys
         }
-        
-        // これ呼ばなきゃリストが更新されません
-        task?.resume()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,7 +59,7 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repository.count
+        return repositorys.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -9,12 +9,12 @@
 import Foundation
 
 struct GitRepository: Codable {
-    let id: Int
-    let fullName: String
-    let owner: Owner
-    let stargazersCount, watchersCount: Int
-    let language: String
-    let forksCount: Int
+    let id: Int?
+    let fullName: String?
+    let owner: Owner?
+    let stargazersCount, watchersCount: Int?
+    let language: String?
+    let forksCount: Int?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -28,8 +28,8 @@ struct GitRepository: Codable {
 }
 
 struct Owner: Codable {
-    let login: String
-    let avatarURL: String
+    let login: String?
+    let avatarURL: String?
     
     enum CodingKeys: String, CodingKey {
         case login

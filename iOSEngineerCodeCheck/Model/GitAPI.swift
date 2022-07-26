@@ -39,14 +39,18 @@ class GitAPI {
                 guard let items = json.items else { return }
                 
                 for item in items {
-                    let addRepository = GitRepository(id: item.id,
-                                                      fullName: item.fullName,
-                                                      owner: Owner(login: item.owner.login,
-                                                                    avatarURL: item.owner.avatarURL),
-                                                      stargazersCount: item.stargazersCount,
-                                                      watchersCount: item.watchersCount,
-                                                      language: item.language,
-                                                      forksCount: item.forksCount)
+                    let addRepository = GitRepository(
+                        id: item.id,
+                        fullName: item.fullName,
+                        owner: Owner(
+                            login: item.owner?.login,
+                            avatarURL: item.owner?.avatarURL
+                        ),
+                        stargazersCount: item.stargazersCount,
+                        watchersCount: item.watchersCount,
+                        language: item.language,
+                        forksCount: item.forksCount
+                    )
                     
                     repositorys.append(addRepository)
                     
