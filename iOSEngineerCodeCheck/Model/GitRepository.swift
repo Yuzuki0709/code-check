@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+/// Gitのレポジトリを表す型
 struct GitRepository: Codable {
     let id: Int?
     let fullName: String?
@@ -29,6 +31,8 @@ struct GitRepository: Codable {
     }
 }
 
+
+/// レポジトリのオーナーを表す型
 struct Owner: Codable {
     let login: String?
     let avatarURL: String?

@@ -14,6 +14,12 @@ class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     
+    var repository: GitRepository!
+    
+    
+    /// それぞれのUILabelにテキストをセットする関数
+    /// 初期化時必ず呼び出す
+    /// - Parameter repository: セットするレポジトリ
     func setup(repository: GitRepository) {
         nameLabel.text = repository.fullName
         detailLabel.text = repository.language

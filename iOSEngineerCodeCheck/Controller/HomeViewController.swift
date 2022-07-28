@@ -13,12 +13,14 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var repositoryTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    // APIで受け取るレポジトリの配列
     var repositorys: [GitRepository] = [] {
         didSet {
             self.repositoryTableView.reloadData()
         }
     }
     
+    // 画面遷移時に渡すレポジトリ
     var selectionRepository: GitRepository? = nil
     
     override func viewDidLoad() {
@@ -52,9 +54,12 @@ extension HomeViewController: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        // テキストが空だったらreturnする
         guard let word = searchBar.text,
               !word.isEmpty else { return }
         
+        // GitAPIでレポジトリをサーチする
         GitAPI.searchRepository(keyword: word) { repositorys in
             self.repositorys = repositorys
         }
@@ -62,6 +67,7 @@ extension HomeViewController: UISearchBarDelegate {
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repositorys.count
     }
@@ -74,6 +80,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         ) as? RepositoryTableViewCell else { return UITableViewCell() }
         
         let repository = repositorys[indexPath.row]
+        
+        // RepositoryTableViewCellのsetup関数を呼び出す
         cell.setup(repository: repository)
         
         return cell

@@ -12,24 +12,34 @@ struct ResultJson: Codable {
     let items: [GitRepository]?
 }
 
+
+/// GitのAPIを表現した型
 class GitAPI {
+    
+    /// レポジトリをAPIを通し、サーチする関数
+    /// - Parameters:
+    ///   - keyword: 検索したいワード
+    ///   - completion: 処理終了時に実行したい関数
     static func searchRepository(keyword: String, completion: @escaping ([GitRepository]) -> Void) {
         var repositorys: [GitRepository] = []
         
+        // キーワードをURLで使えるようにエンコード
         guard let keywordEncode = keyword.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         else { return }
         
         guard let url = URL(string: "https://api.github.com/search/repositories?q=\(keywordEncode)")
         else { return }
         
-        
+        // URLリクエストの作成
         let request = URLRequest(url: url)
         
+        // URLセッションの作成
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         
         let task = session.dataTask(with: request) { data, res, err in
             guard let data = data else { return }
             
+            // セッションを終了
             session.finishTasksAndInvalidate()
             
             do {
@@ -63,6 +73,7 @@ class GitAPI {
             completion(repositorys)
         }
         
+        // taskを実行
         task.resume()
     }
 }

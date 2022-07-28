@@ -21,15 +21,18 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var forksLabel: UILabel!
     @IBOutlet weak var issuesLabel: UILabel!
     
+    // 表示するレポジトリ
     var repository: GitRepository? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setText()
-        getImage()
+        avatarImageGet()
     }
     
+    
+    /// それぞれのUILabelにテキストをセットする関数
     private func setText() {
         
         guard let repository = repository else { return }
@@ -42,7 +45,9 @@ class DetailViewController: UIViewController {
         issuesLabel.text = "\(repository.openIssuesCount ?? 0) open issues"
     }
     
-    private func getImage(){
+    
+    /// レポジトリのオーナーのアバター画像をセットする関数
+    private func avatarImageGet(){
         
         guard let owner = repository?.owner else { return }
         guard let imageURLString = owner.avatarURL else { return }
