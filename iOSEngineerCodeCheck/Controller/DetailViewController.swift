@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var avatarImageView: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -53,15 +54,7 @@ class DetailViewController: UIViewController {
         guard let imageURLString = owner.avatarURL else { return }
         guard let imageURL = URL(string: imageURLString) else { return }
         
-        URLSession.shared.dataTask(with: imageURL) { (data, res, err) in
-            guard let data = data else { return }
-            guard let image = UIImage(data: data) else { return }
-            
-            DispatchQueue.main.async {
-                self.imageView.image = image
-            }
-        }
-        .resume()
+        avatarImageView.kf.setImage(with: imageURL)
     }
     
 }
