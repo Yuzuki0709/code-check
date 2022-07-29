@@ -10,6 +10,8 @@ import UIKit
 
 class ListRepositoryViewController: UIViewController {
     
+    static let identifier = "ListRepositoryViewController"
+    
     @IBOutlet weak var repositoryTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -98,7 +100,7 @@ extension ListRepositoryViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 画面遷移時に呼ばれる
         let storyboard = UIStoryboard(name: "DetailRepositoryView", bundle: nil)
-        let detailView = storyboard.instantiateViewController(withIdentifier: DetailRepositoryViewController.identity) as! DetailRepositoryViewController
+        let detailView = storyboard.instantiateViewController(withIdentifier: DetailRepositoryViewController.identifier) as! DetailRepositoryViewController
         
         detailView.repository = repositorys[indexPath.row]
         

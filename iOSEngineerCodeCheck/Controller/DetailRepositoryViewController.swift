@@ -11,7 +11,7 @@ import Kingfisher
 
 class DetailRepositoryViewController: UIViewController {
     
-    static let identity = "DetailRepositoryViewController"
+    static let identifier = "DetailRepositoryViewController"
     
     @IBOutlet weak var avatarImageView: UIImageView!
     
