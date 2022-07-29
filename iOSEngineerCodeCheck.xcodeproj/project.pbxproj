@@ -10,6 +10,7 @@
 		A267E79B2892361C00DE7261 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A267E79A2892361C00DE7261 /* Kingfisher */; };
 		A267E79D2893600D00DE7261 /* ExampleJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267E79C2893600D00DE7261 /* ExampleJSON.swift */; };
 		A267E79F2893601900DE7261 /* GitRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267E79E2893601900DE7261 /* GitRepositoryTest.swift */; };
+		A267E7A32893661600DE7261 /* GitSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267E7A22893661600DE7261 /* GitSearchResponse.swift */; };
 		A2E8FA0C288F71FE000A5CF2 /* GitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E8FA0B288F71FE000A5CF2 /* GitRepository.swift */; };
 		A2E8FA12288FC332000A5CF2 /* GitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E8FA11288FC331000A5CF2 /* GitAPI.swift */; };
 		A2E8FA16288FDABA000A5CF2 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E8FA15288FDABA000A5CF2 /* RepositoryTableViewCell.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		A267E79C2893600D00DE7261 /* ExampleJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleJSON.swift; sourceTree = "<group>"; };
 		A267E79E2893601900DE7261 /* GitRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepositoryTest.swift; sourceTree = "<group>"; };
+		A267E7A22893661600DE7261 /* GitSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitSearchResponse.swift; sourceTree = "<group>"; };
 		A2E8FA0B288F71FE000A5CF2 /* GitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepository.swift; sourceTree = "<group>"; };
 		A2E8FA11288FC331000A5CF2 /* GitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitAPI.swift; sourceTree = "<group>"; };
 		A2E8FA15288FDABA000A5CF2 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				A2E8FA0B288F71FE000A5CF2 /* GitRepository.swift */,
 				A2E8FA11288FC331000A5CF2 /* GitAPI.swift */,
+				A267E7A22893661600DE7261 /* GitSearchResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				BFD945E3244DC5E80012785A /* HomeViewController.swift in Sources */,
 				A2E8FA12288FC332000A5CF2 /* GitAPI.swift in Sources */,
 				A2E8FA16288FDABA000A5CF2 /* RepositoryTableViewCell.swift in Sources */,
+				A267E7A32893661600DE7261 /* GitSearchResponse.swift in Sources */,
 				A2E8FA0C288F71FE000A5CF2 /* GitRepository.swift in Sources */,
 				BF0A658D244F2A3B00280FA6 /* DetailViewController.swift in Sources */,
 				BFD945DF244DC5E80012785A /* AppDelegate.swift in Sources */,
