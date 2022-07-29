@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "636AAB52-2569-4DD4-9D02-9FF3D31D1069"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62424B34-A89B-4B21-852C-23727FFBFEE8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSEngineerCodeCheckTests/HomeViewControllerTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "setUpWithError()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "62424B34-A89B-4B21-852C-23727FFBFEE8 - fb322d323d791c4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOSEngineerCodeCheckTests.HomeViewControllerTests.setUpWithError() throws -&gt; ()"
+                  moduleName = "iOSEngineerCodeCheckTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iwamotoryuuto/Documents/Swift/code-check-UI-changes/iOSEngineerCodeCheckTests/HomeViewControllerTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "62424B34-A89B-4B21-852C-23727FFBFEE8 - fb322d323d791c4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOSEngineerCodeCheckTests.HomeViewControllerTests.setUpWithError() throws -&gt; ()"
+                  moduleName = "iOSEngineerCodeCheckTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iwamotoryuuto/Documents/Swift/code-check-UI-changes/iOSEngineerCodeCheckTests/HomeViewControllerTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
