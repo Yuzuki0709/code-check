@@ -19,5 +19,10 @@ class GitRepositoryTest: XCTestCase {
         XCTAssertEqual(repository.id, 44838949)
         XCTAssertEqual(repository.fullName, "apple/swift")
         XCTAssertEqual(repository.owner?.login, "apple")
+        XCTAssertEqual(repository.stargazersCount, 60193)
+        XCTAssertEqual(repository.watchersCount, 60193)
+        XCTAssertEqual(repository.language, "C++")
+        XCTAssertEqual(repository.forksCount, 9684)
+        XCTAssertEqual(repository.openIssuesCount, 6001)
     }
 }
