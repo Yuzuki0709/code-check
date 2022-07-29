@@ -68,14 +68,17 @@ extension HomeViewController: UISearchBarDelegate {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
+    // セル数の指定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repositorys.count
     }
     
+    // 高さの指定
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
     
+    // セルの中身の指定
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = repositoryTableView.dequeueReusableCell(
