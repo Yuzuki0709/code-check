@@ -8,7 +8,9 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class ListRepositoryViewController: UIViewController {
+    
+    static let identifier = "ListRepositoryViewController"
     
     @IBOutlet weak var repositoryTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -36,7 +38,7 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "Detail"{
-            guard let destination = segue.destination as? DetailViewController else { return }
+            guard let destination = segue.destination as? DetailRepositoryViewController else { return }
             guard let selectionRepository = selectionRepository else { return }
 
             destination.repository = selectionRepository
@@ -45,7 +47,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UISearchBarDelegate {
+extension ListRepositoryViewController: UISearchBarDelegate {
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         // ↓こうすれば初期のテキストを消せる
@@ -66,16 +68,19 @@ extension HomeViewController: UISearchBarDelegate {
     }
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension ListRepositoryViewController: UITableViewDelegate, UITableViewDataSource {
     
+    // セル数の指定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repositorys.count
     }
     
+    // 高さの指定
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
     
+    // セルの中身の指定
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = repositoryTableView.dequeueReusableCell(
@@ -94,8 +99,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 画面遷移時に呼ばれる
-        selectionRepository = repositorys[indexPath.row]
-        performSegue(withIdentifier: "Detail", sender: self)
+        let storyboard = UIStoryboard(name: "DetailRepositoryView", bundle: nil)
+        let detailView = storyboard.instantiateViewController(withIdentifier: DetailRepositoryViewController.identifier) as! DetailRepositoryViewController
+        
+        detailView.repository = repositorys[indexPath.row]
+        
+        self.navigationController?.pushViewController(detailView, animated: true)
+        
         
     }
 }

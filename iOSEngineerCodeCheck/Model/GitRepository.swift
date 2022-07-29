@@ -10,14 +10,14 @@ import Foundation
 
 
 /// Gitのレポジトリを表す型
-struct GitRepository: Codable {
-    let id: Int?
-    let fullName: String?
-    let owner: Owner?
-    let stargazersCount, watchersCount: Int?
-    let language: String?
-    let forksCount: Int?
-    let openIssuesCount: Int?
+public struct GitRepository: Codable {
+    public let id: Int?
+    public let fullName: String?
+    public let owner: Owner?
+    public let stargazersCount, watchersCount: Int?
+    public let language: String?
+    public let forksCount: Int?
+    public let openIssuesCount: Int?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -33,9 +33,9 @@ struct GitRepository: Codable {
 
 
 /// レポジトリのオーナーを表す型
-struct Owner: Codable {
-    let login: String?
-    let avatarURL: String?
+public struct Owner: Codable {
+    public let login: String?
+    public let avatarURL: String?
     
     enum CodingKeys: String, CodingKey {
         case login

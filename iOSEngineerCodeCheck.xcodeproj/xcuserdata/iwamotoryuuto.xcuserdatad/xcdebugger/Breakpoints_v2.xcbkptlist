@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "636AAB52-2569-4DD4-9D02-9FF3D31D1069"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62424B34-A89B-4B21-852C-23727FFBFEE8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSEngineerCodeCheckTests/HomeViewControllerTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "setUpWithError()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "62424B34-A89B-4B21-852C-23727FFBFEE8 - fb322d323d791c4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOSEngineerCodeCheckTests.HomeViewControllerTests.setUpWithError() throws -&gt; ()"
+                  moduleName = "iOSEngineerCodeCheckTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iwamotoryuuto/Documents/Swift/code-check-UI-changes/iOSEngineerCodeCheckTests/HomeViewControllerTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "62424B34-A89B-4B21-852C-23727FFBFEE8 - fb322d323d791c4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOSEngineerCodeCheckTests.HomeViewControllerTests.setUpWithError() throws -&gt; ()"
+                  moduleName = "iOSEngineerCodeCheckTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iwamotoryuuto/Documents/Swift/code-check-UI-changes/iOSEngineerCodeCheckTests/HomeViewControllerTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84637447-38EF-426D-8EB2-8011F0448656"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSEngineerCodeCheck/Controller/ListRepositoryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "searchBarSearchButtonClicked(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "84637447-38EF-426D-8EB2-8011F0448656 - 1cc708114886a0a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOSEngineerCodeCheck.ListRepositoryViewController.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
+                  moduleName = "iOSEngineerCodeCheck"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iwamotoryuuto/Documents/Swift/code-check-UI-changes/iOSEngineerCodeCheck/Controller/ListRepositoryViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "84637447-38EF-426D-8EB2-8011F0448656 - 1cc708114886a0a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOSEngineerCodeCheck.ListRepositoryViewController.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
+                  moduleName = "iOSEngineerCodeCheck"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iwamotoryuuto/Documents/Swift/code-check-UI-changes/iOSEngineerCodeCheck/Controller/ListRepositoryViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC24B21A-B712-4EB7-A38C-027928A7EB83"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSEngineerCodeCheck/Controller/ListRepositoryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "searchBarSearchButtonClicked(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50CAC3AC-0F00-47B8-87F2-00D46B4F296C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSEngineerCodeCheckTests/GitAPITest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "testSearchRepository()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
