@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import SafariServices
 
 class DetailRepositoryViewController: UIViewController {
     
@@ -24,11 +25,15 @@ class DetailRepositoryViewController: UIViewController {
     @IBOutlet weak var forksLabel: UILabel!
     @IBOutlet weak var issuesLabel: UILabel!
     
+    @IBOutlet weak var goWebButton: UIButton!
+    
     // 表示するレポジトリ
     var repository: GitRepository? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        goWebButton.addTarget(self, action: #selector(goWebButtonTapped(_:)), for: .touchUpInside)
         
         setText()
         avatarImageGet()
@@ -54,7 +59,6 @@ class DetailRepositoryViewController: UIViewController {
         }
     }
     
-    
     /// レポジトリのオーナーのアバター画像をセットする関数
     private func avatarImageGet(){
         
@@ -65,4 +69,20 @@ class DetailRepositoryViewController: UIViewController {
         avatarImageView.kf.setImage(with: imageURL)
     }
     
+    @objc private func goWebButtonTapped(_ sender: UIButton) {
+        guard let urlString = repository?.htmlURL,
+              let url = URL(string: urlString) else { return }
+        
+        // レポジトリの詳細をSafariで表示する
+        let safariViewController = SFSafariViewController(url: url)
+        safariViewController.delegate = self
+        
+        present(safariViewController, animated: true)
+    }
+}
+
+extension DetailRepositoryViewController: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
+    }
 }

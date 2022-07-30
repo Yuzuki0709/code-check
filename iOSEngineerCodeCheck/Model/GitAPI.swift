@@ -51,6 +51,7 @@ class GitAPI {
                             login: item.owner?.login,
                             avatarURL: item.owner?.avatarURL
                         ),
+                        htmlURL: item.htmlURL,
                         stargazersCount: item.stargazersCount,
                         watchersCount: item.watchersCount,
                         language: item.language,

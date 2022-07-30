@@ -31,17 +31,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dvQ-pa-ioc">
                                 <rect key="frame" x="20" y="590" width="374" height="106"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XG-Bj-UkC">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XG-Bj-UkC">
                                         <rect key="frame" x="0.0" y="0.0" width="66.5" height="17"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ICo-Cn-gnb">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ICo-Cn-gnb">
                                         <rect key="frame" x="320.5" y="0.0" width="53.5" height="106"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stars" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFj-DD-3hG">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="14.5"/>
+                                                <rect key="frame" x="24" y="0.0" width="29.5" height="14.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -53,13 +53,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forks" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrJ-1K-MTn">
-                                                <rect key="frame" x="0.0" y="61" width="53.5" height="14.5"/>
+                                                <rect key="frame" x="22" y="61" width="31.5" height="14.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Issues" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBX-dP-VgC">
-                                                <rect key="frame" x="0.0" y="91.5" width="53.5" height="14.5"/>
+                                                <rect key="frame" x="17.5" y="91.5" width="36" height="14.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -68,15 +68,24 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZ6-1z-HfG">
+                                <rect key="frame" x="296" y="91.5" width="98" height="28.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ウェブで見る" titleAlignment="trailing">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleSubhead"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="soh-Py-YVA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ngn-IQ-2rS" firstAttribute="top" secondItem="w8Y-JR-joi" secondAttribute="bottom" constant="28" id="1J8-zB-dwM"/>
                             <constraint firstItem="dvQ-pa-ioc" firstAttribute="top" secondItem="ngn-IQ-2rS" secondAttribute="bottom" constant="28" id="8FN-sf-yM6"/>
+                            <constraint firstItem="soh-Py-YVA" firstAttribute="trailing" secondItem="JZ6-1z-HfG" secondAttribute="trailing" constant="20" id="FCO-oi-fJa"/>
                             <constraint firstItem="ngn-IQ-2rS" firstAttribute="centerX" secondItem="w8Y-JR-joi" secondAttribute="centerX" id="NS8-d5-oJq"/>
                             <constraint firstItem="w8Y-JR-joi" firstAttribute="centerY" secondItem="soh-Py-YVA" secondAttribute="centerY" multiplier="0.7" id="Rrv-Zx-4Gu"/>
                             <constraint firstItem="dvQ-pa-ioc" firstAttribute="centerX" secondItem="ngn-IQ-2rS" secondAttribute="centerX" id="e7j-8n-TTx"/>
+                            <constraint firstItem="w8Y-JR-joi" firstAttribute="top" secondItem="JZ6-1z-HfG" secondAttribute="bottom" constant="10" id="e9e-it-hhQ"/>
                             <constraint firstItem="dvQ-pa-ioc" firstAttribute="width" secondItem="w8Y-JR-joi" secondAttribute="width" id="hKz-cO-Pla"/>
                             <constraint firstItem="ngn-IQ-2rS" firstAttribute="leading" secondItem="soh-Py-YVA" secondAttribute="leading" constant="20" id="iWU-ez-gmJ"/>
                             <constraint firstItem="w8Y-JR-joi" firstAttribute="leading" secondItem="soh-Py-YVA" secondAttribute="leading" constant="20" id="lHL-JK-C5X"/>
@@ -88,6 +97,7 @@
                     <connections>
                         <outlet property="avatarImageView" destination="w8Y-JR-joi" id="bwG-Tc-CFD"/>
                         <outlet property="forksLabel" destination="VrJ-1K-MTn" id="sUL-IH-8jh"/>
+                        <outlet property="goWebButton" destination="JZ6-1z-HfG" id="Ywi-OV-5OO"/>
                         <outlet property="issuesLabel" destination="TBX-dP-VgC" id="Tj7-cE-2pD"/>
                         <outlet property="languageLabel" destination="8XG-Bj-UkC" id="Wjo-i6-xMP"/>
                         <outlet property="stargazersLabel" destination="jFj-DD-3hG" id="k0b-8p-fWN"/>
