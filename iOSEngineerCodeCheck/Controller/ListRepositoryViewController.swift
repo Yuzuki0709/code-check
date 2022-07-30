@@ -87,7 +87,6 @@ extension ListRepositoryViewController: UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 画面遷移時に呼ばれる
         let storyboard = UIStoryboard(name: "DetailRepositoryView", bundle: nil)
@@ -96,7 +95,5 @@ extension ListRepositoryViewController: UITableViewDelegate, UITableViewDataSour
         detailView.repository = repositorys[indexPath.row]
         
         self.navigationController?.pushViewController(detailView, animated: true)
-        
-        
     }
 }
