@@ -35,8 +35,8 @@
 - [【Kingfisher】画像の読み込み方法](https://utro-develop.com/xcode-imageview-kingfisher/)
 
 ### テスト設計をする際に参考
-- [XCTest入門Part2 (Swift)~非同期編~](https://qiita.com/y-okudera/items/e02b73880b8bc499debe)
-- [XCTest入門 (Swift)~UITest編~](https://qiita.com/y-okudera/items/b6211cc3524ad2385150)
+- [XCTest入門Part2 (Swift)/~非同期編/~](https://qiita.com/y-okudera/items/e02b73880b8bc499debe)
+- [XCTest入門 (Swift)/~UITest編/~](https://qiita.com/y-okudera/items/b6211cc3524ad2385150)
 
 ### 参考文献
 - 『Swift実践入門（第3版）』
