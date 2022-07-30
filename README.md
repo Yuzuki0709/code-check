@@ -8,7 +8,7 @@
 
 本アプリは GitHub のリポジトリーを検索するアプリです。
 
-![動作イメージ](README_Images/app.mp4)
+![動作イメージ](README_Images/app.gif)
 
 ### 環境
 
@@ -32,13 +32,13 @@
 ## 参考記事
 
 ### Kingfisherを使用する際に参考
--[【Kingfisher】画像の読み込み方法](https://utro-develop.com/xcode-imageview-kingfisher/)
+- [【Kingfisher】画像の読み込み方法](https://utro-develop.com/xcode-imageview-kingfisher/)
 
 ### テスト設計をする際に参考
--[XCTest入門Part2 (Swift) ~非同期編~](https://qiita.com/y-okudera/items/e02b73880b8bc499debe)
--[XCTest入門 (Swift) ~UITest編~](https://qiita.com/y-okudera/items/b6211cc3524ad2385150)
+- [XCTest入門Part2 (Swift) ~非同期編~](https://qiita.com/y-okudera/items/e02b73880b8bc499debe)
+- [XCTest入門 (Swift) ~UITest編~](https://qiita.com/y-okudera/items/b6211cc3524ad2385150)
 
 ### 参考文献
--『Swift実践入門（第3版）』
--『iPhoneアプリ開発集中講座』
+- 『Swift実践入門（第3版）』
+- 『iPhoneアプリ開発集中講座』
 
