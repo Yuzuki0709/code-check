@@ -8,11 +8,6 @@
 
 import Foundation
 
-struct ResultJson: Codable {
-    let items: [GitRepository]?
-}
-
-
 /// GitのAPIを表現した型
 class GitAPI {
     
@@ -44,11 +39,11 @@ class GitAPI {
             
             do {
                 let decoder = JSONDecoder()
-                let json = try decoder.decode(ResultJson.self, from: data)
+                let json = try decoder.decode(GitSearchResponse<GitRepository>.self, from: data)
                 
-                guard let items = json.items else { return }
+                // guard let items = json.items else { return }
                 
-                for item in items {
+                for item in json.items {
                     let addRepository = GitRepository(
                         id: item.id,
                         fullName: item.fullName,
