@@ -41,11 +41,17 @@ class DetailRepositoryViewController: UIViewController {
         guard let repository = repository else { return }
         
         titleLabel.text = repository.fullName ?? ""
-        languageLabel.text = "Written in \(repository.language ?? "")"
         stargazersLabel.text = "\(repository.stargazersCount ?? 0) stars"
         wachersLabel.text = "\(repository.watchersCount ?? 0) watchers"
         forksLabel.text = "\(repository.forksCount ?? 0) forks"
         issuesLabel.text = "\(repository.openIssuesCount ?? 0) open issues"
+        
+        // 言語が空だったら何も表示しない
+        if let language = repository.language {
+            languageLabel.text = "Written in \(language)"
+        } else {
+            languageLabel.text = ""
+        }
     }
     
     
