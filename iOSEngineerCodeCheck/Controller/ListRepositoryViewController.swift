@@ -34,17 +34,6 @@ class ListRepositoryViewController: UIViewController {
         repositoryTableView.delegate = self
         repositoryTableView.dataSource = self
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "Detail"{
-            guard let destination = segue.destination as? DetailRepositoryViewController else { return }
-            guard let selectionRepository = selectionRepository else { return }
-
-            destination.repository = selectionRepository
-        }
-        
-    }
 }
 
 extension ListRepositoryViewController: UISearchBarDelegate {
@@ -65,6 +54,8 @@ extension ListRepositoryViewController: UISearchBarDelegate {
         GitAPI.searchRepository(keyword: word) { repositorys in
             self.repositorys = repositorys
         }
+        
+        searchBar.resignFirstResponder()
     }
 }
 
